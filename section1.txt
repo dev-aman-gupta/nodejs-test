@@ -1,0 +1,13 @@
+1) Explain the difference between an abstract class and an interface.
+Answer: 
+An abstract class is used when there are multiple classes which require/share a common logic, then we can create an abstract class and allow those concrete classes to extend it.
+Interfaces are implemented by a class, all methods of an interface need to be implemented by a class. 
+
+Variables inside an interface are constant while variables of an abstract class can be  modified by a method.
+These are used for abstraction where we don't want the shared logic to be known by classes. 
+ 
+2) What is the purpose of getters and setters in a class?
+Answer: Getters and setters are used to get or set the values of the class variables. These are used to prevent any unauthorized method/class access the values or a method/class updates the invalid value.
+Setter methods can be used to do the type check, or any custom checks required before the value is assigned to the variable.
+Getter methods can be used to set access of the values based on roles or authentication etc.
+

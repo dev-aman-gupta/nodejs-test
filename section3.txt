@@ -1,0 +1,15 @@
+1) What is an error first callback, and what is the reason for this pattern existing?
+Answer: A callback is an async function which is called after a function is completed. 
+Error first callback pattern: A callback function where the first argument is the error or error obj and the second (or more) argument is the response/data returned from the main function.
+
+The pattern allows us to catch and handle all possible errors from the main function. 
+Also, when creating any library or services, it is not possible to throw the error directly, instead we might have to perform more actions based on the error, so we send the err as the first argument to the callback function.
+ 
+2) Explain the difference between fs.readSync and fs.read (File System module in Nodejs)
+Both fs.readSync and fs.read load the content of a file in memory and return the content but synchronously and asynchronously respectively.  
+While using fs.read, file path and a callback method is passed but with fs.readSync only path is required.
+If required to use within a node API server,  use of fs.readSync should be avoided if there can any any large files to read because it holds the execution of the server and the upcoming api requests are put in the queue. 
+
+3) What tasks do you feel should be done asynchronously?
+Any tasks which uses any external services like database, file system, or any other third party services should be implemented asynchronously.
+Tasks which are secondary actions of a main action for eg, on any event where the user needs to be notified of the success of the action and the system should also send an email for the same. The sending of the email through an email service can be done asynchronousl

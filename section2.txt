@@ -1,0 +1,7 @@
+1) Explain the purpose of black box testing
+Answer: During the black box testing, the main goal is to test the functionalities or behavior of a software without having any information on how that is developed or structured and how that is implemented.
+The main benefit of black box testing is that it brings out more cases/issues which are based on actions or a series of actions. Similar to how an actual user would use the software. 
+
+2) In your opinion what are the benefits of test cases
+   Answer: Writing test cases improves or maintains the quality of a software in the longer run.
+With any new feature/functionality/ change in logic, the test cases help the developer to make sure that all software features are working and any changes made do not impact the existing working functionalities of the software.
